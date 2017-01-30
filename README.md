@@ -7,7 +7,8 @@ Documentation about the Local Database Service: SOAP Web Service
 ## API
 #### Get all people
 POST http://127.0.1.1:6902/soap/people
-```<soap:Envelope
+```
+<soap:Envelope
 xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
 soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
     <soap:Body xmlns:m="http://soap.localdatabase.introsde/">
@@ -19,7 +20,8 @@ soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
 
 #### Read one person
 POST http://127.0.1.1:6902/soap/people
-```<soap:Envelope
+```
+<soap:Envelope
 xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
 soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
     <soap:Body xmlns:m="http://soap.localdatabase.introsde/">
@@ -32,7 +34,8 @@ soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
 
 #### Update person (no measure)
 POST http://127.0.1.1:6902/soap/people
-```<soap:Envelope
+```
+<soap:Envelope
 xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
 soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
     <soap:Body xmlns:m="http://soap.localdatabase.introsde/">
@@ -51,7 +54,8 @@ soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
 
 #### Create person
 POST http://127.0.1.1:6902/soap/people
-```<soap:Envelope
+```
+<soap:Envelope
 xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
 soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
     <soap:Body xmlns:m="http://soap.localdatabase.introsde/">
@@ -83,7 +87,8 @@ soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
 
 #### Delete person
 POST http://127.0.1.1:6902/soap/people
-```<soap:Envelope
+```
+<soap:Envelope
 xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
 soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
     <soap:Body xmlns:m="http://soap.localdatabase.introsde/">
@@ -96,7 +101,8 @@ soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
 
 #### Read person history
 POST http://127.0.1.1:6902/soap/people
-```<soap:Envelope
+```
+<soap:Envelope
 xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
 soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
     <soap:Body xmlns:m="http://soap.localdatabase.introsde/">
@@ -110,7 +116,8 @@ soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
 
 #### Read all measures
 POST http://127.0.1.1:6902/soap/people
-```<soap:Envelope
+```
+<soap:Envelope
 xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
 soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
     <soap:Body xmlns:m="http://soap.localdatabase.introsde/">
@@ -122,7 +129,8 @@ soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
 
 #### Read measure by person id, type and mid
 POST http://127.0.1.1:6902/soap/people
-```<soap:Envelope
+```
+<soap:Envelope
 xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
 soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
     <soap:Body xmlns:m="http://soap.localdatabase.introsde/">
@@ -137,7 +145,8 @@ soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
 
 #### Save person measure
 POST http://127.0.1.1:6902/soap/people
-```<soap:Envelope
+```
+<soap:Envelope
 xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
 soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
     <soap:Body xmlns:m="http://soap.localdatabase.introsde/">
@@ -156,7 +165,8 @@ soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
 
 #### Update measure
 POST http://127.0.1.1:6902/soap/people
-```<soap:Envelope
+```
+<soap:Envelope
 xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
 soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
     <soap:Body xmlns:m="http://soap.localdatabase.introsde/">
