@@ -3,6 +3,7 @@ package introsde.localdatabase.soap;
 import introsde.localdatabase.model.Measure;
 import introsde.localdatabase.model.Person;
 
+import java.text.ParseException;
 import java.util.List;
 
 import javax.jws.WebService;
@@ -41,6 +42,39 @@ public class PeopleImpl implements People {
 	@Override
 	public Person updatePerson(Person person) {
 		person.setHealthHistory(Measure.getAll());
+		person.setCurrentHealth(Measure.getCurrentMeasuresById(person.getIdPerson()));
+        Person existing = Person.getPersonById(person.getIdPerson());
+
+        if (existing == null) {
+            return null;
+        } else {
+            //take the non specified fields from the db
+            if (person.getFirstname() == null) {
+                person.setFirstname(existing.getFirstname());
+            }
+            if (person.getLastname() == null) {
+                person.setLastname(existing.getLastname());
+            }
+            if (person.getBirthdate() == null) {
+                try {
+                    person.setBirthdate(existing.getBirthdate());
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (person.getEmail() == null) {
+                person.setEmail(existing.getEmail());
+            }
+            if (person.getAuthSecret() == null) {
+                person.setAuthSecret(existing.getAuthSecret());
+            }
+            if (person.getAuthToken() == null) {
+                person.setAuthToken(existing.getAuthToken());
+            }
+            if (person.getChatId() == null) {
+                person.setChatId(existing.getChatId());
+            }
+        }         
 		Person updatedPerson = Person.updatePerson(person);
 		return updatedPerson;
 	}

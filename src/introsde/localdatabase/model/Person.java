@@ -216,7 +216,6 @@ public class Person implements Serializable {
 	}
 	
 	public static Person updatePerson(Person p) {
-		p.setCurrentHealth(Measure.getCurrentMeasuresById(p.getIdPerson()));
 		EntityManager em = LifeCoachDao.instance.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
