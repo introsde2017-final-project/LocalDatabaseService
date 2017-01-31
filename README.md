@@ -99,6 +99,20 @@ soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
 </soap:Envelope>
 ```
 
+#### Get person by chat id
+POST http://127.0.1.1:6902/soap/people
+```
+<soap:Envelope
+xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+    <soap:Body xmlns:m="http://soap.localdatabase.introsde/">
+        <m:getPersonByChatId>
+            <chatId>50000</chatId>
+        </m:getPersonByChatId>
+    </soap:Body>
+</soap:Envelope>
+```
+
 #### Read person history
 POST http://127.0.1.1:6902/soap/people
 ```

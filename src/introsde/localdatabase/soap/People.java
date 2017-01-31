@@ -36,6 +36,10 @@ public interface People {
     @WebResult(name="success") 
     public int deletePerson(@WebParam(name="personId") Long id);
     
+    @WebMethod(operationName="getPersonByChatId")
+    @WebResult(name="person") 
+    public Person getPersonByChatId(@WebParam(name="chatId") Long chatId);
+    
     @WebMethod(operationName="readPersonHistory")
     @WebResult(name="measure") 
     public List<Measure> readPersonHistory(@WebParam(name="personId") Long id, @WebParam(name="measureType") String measureType);

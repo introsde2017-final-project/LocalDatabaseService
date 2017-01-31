@@ -6,6 +6,7 @@ import introsde.localdatabase.model.Person;
 import java.text.ParseException;
 import java.util.List;
 
+import javax.jws.WebParam;
 import javax.jws.WebService;
 
 //Service Implementation
@@ -88,6 +89,11 @@ public class PeopleImpl implements People {
 		} else {
 			return -1;
 		}
+	}
+	
+	@Override
+	public Person getPersonByChatId(Long chatId) {
+		return Person.getPersonByChatId(chatId);
 	}
 
 	@Override

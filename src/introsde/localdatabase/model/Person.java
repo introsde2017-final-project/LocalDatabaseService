@@ -183,6 +183,24 @@ public class Person implements Serializable {
 		return p;
 	}
 	
+	public static Person getPersonByChatId(Long chatId) {
+		EntityManager em = LifeCoachDao.instance.createEntityManager();
+		
+		Person p = null;
+		try {
+			p = em.createQuery(
+                "SELECT p FROM Person p WHERE p.chatId = :chatId", Person.class)
+				.setParameter("chatId", chatId)
+                .getSingleResult();
+			LifeCoachDao.instance.closeConnections(em);
+			p.setCurrentHealth(Measure.getCurrentMeasuresById(p.getIdPerson()));
+		} catch (NoResultException e) {
+			//person not in db
+		}
+
+		return p;
+	}
+	
 	public static List<Person> getAll() {
 		EntityManager em = LifeCoachDao.instance.createEntityManager();
 	    List<Person> list = em.createNamedQuery("Person.findAll", Person.class).getResultList();
