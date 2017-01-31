@@ -54,6 +54,15 @@ public class Person implements Serializable {
 	
 	@Column(name="\"email\"")
 	private String email;
+	
+	@Column(name="\"auth_secret\"")
+	private String authSecret;
+	
+	@Column(name="\"auth_token\"")
+	private String authToken;
+	
+	@Column(name="\"chat_id\"")
+	private Long chatId;
 
 	// mappedBy must be equal to the name of the attribute in LifeStatus that maps this relation
 	@OneToMany(mappedBy="person",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
@@ -112,7 +121,31 @@ public class Person implements Serializable {
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
 	}
+	
+	public String getAuthSecret() {
+		return this.authSecret;
+	}
 
+	public void setAuthSecret(String authSecret) {
+		this.authSecret = authSecret;
+	}
+
+	public String getAuthToken() {
+		return this.authToken;
+	}
+
+	public void setAuthToken(String authToken) {
+		this.authToken = authToken;
+	}
+	
+	public Long getChatId() {
+		return this.chatId;
+	}
+
+	public void setChatId(Long chatId) {
+		this.chatId = chatId;
+	}
+	
 	// the XmlElementWrapper defines the name of node in which the list of LifeStatus elements
 	// will be inserted
 	@XmlElementWrapper(name = "currentHealth")
