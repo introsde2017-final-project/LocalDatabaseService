@@ -120,7 +120,9 @@ public class Measure implements Serializable {
 		EntityManager em = LifeCoachDao.instance.createEntityManager();
 		
 		List<Measure> list = em.createQuery(
-                "SELECT m FROM Measure m WHERE m.person.idPerson = :id GROUP BY m.measureType HAVING m.dateRegistered = MAX(m.dateRegistered)",
+                "SELECT m FROM Measure m WHERE m.person.idPerson = :id AND m.dateRegistered =  " +
+                		"(SELECT MAX(m1.dateRegistered) FROM Measure m1 WHERE m1.person.idPerson = :id " +
+                		"AND m1.measureType = m.measureType) GROUP BY m.measureType HAVING m.idMeasure = MAX(m.idMeasure)",
                 Measure.class)
                 .setParameter("id", personId)
                 .getResultList();
