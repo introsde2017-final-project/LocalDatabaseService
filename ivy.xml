@@ -21,20 +21,13 @@
        xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
     <info
         organisation="introsde"
-        module="lab08"
+        module="finalProject"
         status="integration">
 	</info>
 	
 	<dependencies>
-        <!-- JAX-WS bundle dependency --> 
-        <dependency org="com.sun.xml.ws" name="jaxws-rt" rev="2.2.10"/>
-	
-        <!-- Other dependencies -->
         <dependency org="org.xerial" name="sqlite-jdbc" rev="3.14.2.1"/>
-		<dependency org="javax.ejb" name="javax.ejb-api" rev="3.2"/>
         <dependency org="org.eclipse.persistence" name="javax.persistence" rev="2.1.0"/>
         <dependency org="org.eclipse.persistence" name="org.eclipse.persistence.jpa" rev="2.5.2"/>
-        <dependency org="org.eclipse.persistence" name="org.eclipse.persistence.nosql" rev="2.5.2"/>
-       
     </dependencies>
 </ivy-module>

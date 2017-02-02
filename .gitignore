@@ -1,0 +1,8 @@
+/build/
+.classpath
+.settings/
+.project
+WebContent/WEB-INF/lib/
+*~
+*.class
+ivy/
