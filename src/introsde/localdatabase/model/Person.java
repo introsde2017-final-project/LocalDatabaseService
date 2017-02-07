@@ -63,6 +63,9 @@ public class Person implements Serializable {
 	
 	@Column(name="\"chat_id\"")
 	private Long chatId;
+	
+	@Column(name="\"calories_meal\"")
+	private Long caloriesMeal;
 
 	// mappedBy must be equal to the name of the attribute in LifeStatus that maps this relation
 	@OneToMany(mappedBy="person",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
@@ -144,6 +147,14 @@ public class Person implements Serializable {
 
 	public void setChatId(Long chatId) {
 		this.chatId = chatId;
+	}
+	
+	public Long getCaloriesMeal() {
+		return this.caloriesMeal;
+	}
+
+	public void setCaloriesMeal(Long caloriesMeal) {
+		this.caloriesMeal = caloriesMeal;
 	}
 	
 	// the XmlElementWrapper defines the name of node in which the list of LifeStatus elements
