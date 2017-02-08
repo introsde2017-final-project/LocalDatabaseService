@@ -88,6 +88,10 @@ public class Person implements Serializable {
 
 
 	public void setBirthdate(String bd) throws ParseException {
+		if (bd == null) {
+			this.birthdate = null;
+			return;
+		}
         DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
         Date date = format.parse(bd);
         this.birthdate = date;

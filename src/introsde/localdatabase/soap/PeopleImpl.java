@@ -75,6 +75,9 @@ public class PeopleImpl implements People {
             if (person.getChatId() == null) {
                 person.setChatId(existing.getChatId());
             }
+            if (person.getCaloriesMeal() == null) {
+                person.setCaloriesMeal(existing.getCaloriesMeal());
+            }
         }         
 		Person updatedPerson = Person.updatePerson(person);
 		return updatedPerson;
